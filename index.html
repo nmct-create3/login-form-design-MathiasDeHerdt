@@ -21,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <section class="o-row o-row--lg o-row--body">
+    <section class="o-row o-row--lg o-row--body o-row--login">
       <div class="o-container u-max-width-xs">
         <h1 class="c-logo">
           <svg class="c-logo__symbol" viewBox="0 0 119 24" xmlns="http://www.w3.org/2000/svg">
@@ -51,15 +51,15 @@
               <input class="c-input" type="password" name="password" id="password" required />
             </p>
             <p class="c-form-field c-form-field--option">
-              <input type="checkbox" name="rememberme" id="rememberme" />
+              <input class="c-box c-input-box" type="checkbox" name="rememberme" id="rememberme" />
               <label class="c-label c-label--option" for="rememberme"> Remember me </label>
             </p>
             <p><input class="o-button-reset c-button" type="submit" value="Sign in" /></p>
-            <p class="u-align-text-center u-align-margin-text">
+            <p class="u-align-text-center u-align-margin-text u-text-sm">
               <a href="#!"> Forgot password? </a>
             </p>
           </div>
-          <div class="c-card__footer">
+          <div class="c-card__footer u-text-sm u-color-lichter-grijs">
             <p>Don't have an account? <a href="#">Create an account</a></p>
           </div>
         </form>

@@ -7,6 +7,9 @@
 \*------------------------------------*/
 
 :root {
+  --global-color-alpha-light: #4f95ff;
+  --global-color-alpha: #3385ff;
+  --global-color-alpha-dark: #2e77e6;
 }
 
 /* CSS variables here */
@@ -51,13 +54,13 @@ html {
 */
 
 ::-moz-selection {
-  background: #3385ff;
+  background: var(--global-color-alpha);
   color: white;
   text-shadow: none;
 }
 
 ::selection {
-  background: #3385ff;
+  background: var(--global-color-alpha);
   color: white;
   text-shadow: none;
 }
@@ -162,7 +165,7 @@ hr {
 }
 
 a {
-  color: #3385ff;
+  color: var(--global-color-alpha);
   transition: all 0.1s ease-in-out;
 }
 
@@ -203,6 +206,9 @@ label {
 
 .o-row--login {
   /* stuff here to align the card */
+  display: flex; /* aligneerd de child elements */
+  align-items: center; /* center volgens de Y-as */
+  min-height: 100vh; /* hetgene wat je ziet in de browser */
 }
 
 /* size modifiers */
@@ -452,7 +458,7 @@ label {
 }
 
 .c-logo__inner-circle {
-  fill: #3385ff;
+  fill: var(--global-color-alpha);
 }
 
 .c-logo__outer-circle {
@@ -548,9 +554,19 @@ label {
 }
 
 .c-input:focus {
-  border-color: #3385ff;
+  border-color: var(--global-color-alpha);
   box-shadow: 0 0 4px 3px #3385ff4d;
   /* box-shadow: h-offset v-offset blur spread color; */
+}
+
+.c-input-box {
+  background-color: white;
+  outline: none;
+}
+
+.c-input-box:focus {
+  border-color: var(--global-color-alpha);
+  box-shadow: 0 0 4px 3px #3385ff4d;
 }
 
 /*
@@ -583,33 +599,46 @@ label {
 */
 
 .c-button {
-  background-color: #3385ff;
+  background-color: var(--global-color-alpha);
   border-radius: 3px;
-  border: 1px solid #2e77e6;
+  border: 1px solid var(--global-color-alpha-dark);
   color: #ffffff;
   font-size: 16px;
   font-weight: 600;
   line-height: 20px;
   padding: 13px 12px;
-  box-shadow: 0 0 0 1px #3385ff;
+  box-shadow: 0 0 0 1px var(--global-color-alpha);
   outline: none;
 
   width: 100%;
 }
 
 .c-button:hover {
-  background-color: #4f95ff;
+  background-color: var(--global-color-alpha-light);
 }
 
 .c-button:focus {
-  background-color: #3385ff;
+  background-color: var(--global-color-alpha);
 }
 
 .c-button:active {
-  background-color: #2e77e6;
+  background-color: var(--global-color-alpha-dark);
 }
 
-.c-button--block {
+.c-box {
+  background-color: white;
+}
+
+.c-box:hover {
+}
+
+.c-box:focus {
+}
+
+.c-box:active {
+}
+
+.c-box:checked:active {
 }
 
 /*------------------------------------*\
@@ -628,6 +657,10 @@ label {
 
 .u-color-neutral-dark {
   color: Black;
+}
+
+.u-color-lichter-grijs {
+  color: #81838d;
 }
 
 /*
